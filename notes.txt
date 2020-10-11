@@ -1,0 +1,126 @@
+== Loggable Parameters == 
+3489783440u,"Adjustable boost: Adjustable top limit":
+3489783438u,"Adjustable octane: Octane value":
+3489783434u,"Adjustable octane: high octane basic ignition lookup":
+3489783433u,"Adjustable octane: low octane basic ignition lookup":
+3489783437u,"Adjustable octane: octane interpolation factor":
+3489741942u,"Ambient pressure":
+3489743642u,"lambda controller output":
+3489740306u,"Fuel rail pressure":
+3489723290u,"Actual gear":
+3489722289u,"Knock retard cylinder 1":
+3489722290u,
+3489722291u,
+3489722292u,
+3489719653u,
+3489719654u,
+3489719655u,
+3489719656u,
+3489734854u,
+3489743862u,
+3489742402u,
+3489735680u,
+3489734026u,
+3489734038u,
+3489742766u,
+3489734382u,
+3489734396u,
+3489734690u,
+3489710455u,
+3489719939u,
+3489710457u,
+3489747502u,
+3489747292u,
+3489748036u,
+3489740836u,
+3489733414u,
+3489740288u,
+3489734066u,
+3489734336u
+
+
+
+== Parameter info ==
+        return 0;
+        return 1;
+        return 2;
+        return 3;
+        return 4;
+        return 5;
+        return 6;
+        return 7;
+        return 8;
+        return 9;
+case "Knock retard cylinder 2":
+        return 10;
+case "Knock retard cylinder 3":
+        return 11;
+case "Knock retard cylinder 4":
+        return 12;
+case "Ignition timing cylinder 1":
+        return 13;
+case "Ignition timing cylinder 2":
+        return 14;
+case "Ignition timing cylinder 3":
+        return 15;
+case "Ignition timing cylinder 4":
+        return 16;
+case "Lambda value":
+        return 17;
+case "Lambda setpoint":
+        return 18;
+case "Air mass":
+        return 19;
+case "Engine speed":
+        return 20;
+ase "Position of boost pressure actuator":
+        return 21;
+case "Position setpoint for boost pressure actuator":
+        return 22;
+case "Pressure upstream throttle":
+        return 23;
+case "Pressure before throttle set point":
+        return 24;
+case "Top limit of pressure upstream throttle setpoint":
+        return 25;
+case "Accelerator pedal":
+        return 26;
+case "Ambient air temperature":
+        return 27;
+case "Injector pulsewidth":
+        return 28;
+case "Intake air temperature":
+        return 29;
+case "Throttle angle":
+        return 30;
+case "Actual engine torque":
+        return 31;
+case "Torque limit":
+        return 32;
+case "Injector pulsewidth MPI":
+        return 33;
+case "Low pressure rail pressure":
+        return 34;
+case "Low pressure fuel pump speed":
+        return 35;
+case "Recirculation actuator position":
+        return 36;
+case "Recirculation actuator setpoint":
+        return 37;
+}
+return 0;
+
+
+logVariable = this.populateLogVariableSimos18HSL(text5);
+logVariable.Address = this.getAddress(this.getAddressIndex(text5), controllerInfo.InfoFields[7].ReplyString, controllerInfo.InfoFields[9].ReplyString);
+
+case "Adjustable boost: Adjustable top limit":
+  logVariable.VariableName = variable;
+  logVariable.DataWidth = DataWidth.EightBitUnsigned;
+  logVariable.Formula = 17;
+  logVariable.Unit = "hPa";
+return logVariable;
+
+
+
+

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brianledbetter.tuneadjuster.Logger">
+
+    <RelativeLayout
+        android:id="@+id/TableContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toTopOf="@+id/exitSwitch"
+        tools:context=".HomeScreen" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="*"
+            android:weightSum="3" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+
+                <Button
+                    android:id="@+id/buttonStartLogging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".3"
+                    android:text="Start Logging"
+                    android:textSize="30sp"/>
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+
+                <Button
+                    android:id="@+id/buttonStopLogging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".3"
+                    android:text="Stop Logging"
+                    android:textSize="30sp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+
+
+                <Button
+                    android:id="@+id/buttonWOTLogging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".3"
+                    android:text="WOT Logging"
+                    android:textSize="30sp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRowTools"
+                android:layout_weight=".15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                >
+
+
+
+
+            </TableRow>
+        </TableLayout>
+
+
+
+    </RelativeLayout>
+
+    <!--
+    <Switch
+        android:id="@+id/connectionSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connect"
+        android:saveEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/exitSwitch"
+        app:layout_constraintVertical_weight="1.5" />
+-->
+    <Button
+        android:id="@+id/exitSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/restartLogger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart Logger"
+        app:layout_constraintBottom_toBottomOf="@+id/TableContainer"
+        app:layout_constraintLeft_toRightOf="@+id/exitSwitch" />
+
+
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="@string/not_connected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
